@@ -1,1 +1,20 @@
 \label{subsec:tossim}
+TOSSIM\cite{tossim} is a simulator for TinyOS sensor networks.
+All the protocol and systems simulated using TOSSIM are written in nesC \cite{nesC},
+an extension to C programming language designed to meet the specification and 
+restrictions of TinyOS. At a first glance this might seem a disadvantage, but 
+the code can then be reused on real-world motes running TinyOS
+without further changes.
+TOSSIM provides debugging facilities having several debugging modes 
+(such as boot, clock,task,led,...) some of which are being used in TinyOS code
+and others are reserved for applications components. Compiling TinyOS for mote
+hardware removes the debug statements.
+It also provides support for network monitoring and packet injection
+through SerialForwarder\footnote{\url{http://docs.tinyos.net/index.php/Mote-PC_
+serial_communication_and_SerialForwarder}}, the TinyOS interface tool.
+//
+For radio communication, TOSSIM provides two modes: the simple mode when bits
+are transmitted without errors regardless of the distance between of the transmitting
+motes, and the lossy mode, when for every pair of motes a number between 0 and 1 
+denotes the probability with which enery transmitted bit will be corrupted. 
+
