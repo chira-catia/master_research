@@ -26,4 +26,4 @@ $(PDF): $(TEX) $(BIB) src/
 	$(PDFLATEX) $<
 
 clean:
-	-rm -f *~ *.aux *.log *.blg *.bbl *.out
+	-rm -f *~ *.aux *.log *.blg *.bbl *.out *.pdf
