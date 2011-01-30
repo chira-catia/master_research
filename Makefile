@@ -1,4 +1,4 @@
-BASENAME = my-report
+BASENAME = report
 PDF = $(addsuffix .pdf, $(BASENAME))
 DVI = $(addsuffix .dvi, $(BASENAME))
 TEX = $(addsuffix .tex, $(BASENAME))
