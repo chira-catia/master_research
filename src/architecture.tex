@@ -11,3 +11,12 @@ powered one. Each component will provide an access interface for other component
 (an sensor might have a read_data() interface) and they will not depend on other 
 components. This way we will be able to simulate a wide range of platforms by
 combining different components in different slots.
+
+All the activity on one node will be coordinated by a CPU component. This will provide
+a API to routing protocol running on the node for activities such as allocating memory 
+and sending and receiving packets. To simulate a slower node, the code running on the 
+node will be ran using the ptrace system call. The protocol will set in the begining
+breakpoints at every point in the program and the parent process(the node) will limit
+its speed based on a configured value. We don't see any reasons to have more than one
+type of CPU so only one will be available but have it performance and available memory
+configurable.
