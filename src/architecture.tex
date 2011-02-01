@@ -1,0 +1,13 @@
+\label{subsec:architecture}
+
+The simulator we will be building will have a modular design. Each type
+of component, a battery or a sensor, will a have a template containing a
+very basic implementation of it. For example a tranceiver template will
+have a template consisting of the send() and recv() methods, but more
+usefull implementations will build on this to take into account the
+environment and power consumption. On top of this template many different
+implementations may be derived; for example a lithium-ion battery or a solar
+powered one. Each component will provide an access interface for other components
+(an sensor might have a read_data() interface) and they will not depend on other 
+components. This way we will be able to simulate a wide range of platforms by
+combining different components in different slots.
