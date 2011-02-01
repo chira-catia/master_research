@@ -1,3 +1,21 @@
 % vim: set tw=78 sts=2 sw=2 ts=8 aw et ai:
 
-Novel and revolutionizing approach. Aiming for world domination, as shown in
+While the simulators investigated in this paper are very useful, we believe
+that there is room for improvement. Most of them are generic simulators
+adapted for simulating wireless sensor networks. We believe that a simulator
+built from the begining having in mind that it will be used for wireless
+sensors will increase its usability and make it possible that it will be
+useful in more circumstances.
+
+We propose this general plan for building this simulator:
+\begin{itemize}
+  \item Component architecture and basic node structure. We will build
+  template components and create the necessary framework to integrate them
+  into a sensor node.
+  \item Comunication between nodes. Create the neccessary framework to make
+  two nodes communicate.
+  \item Implement some routing procols. To evaluate our simulator we will
+  implement some routing procols(LEACH, TEEN) in it and see it's performance
+  \item Environment simulation. Will augment the simulator with environment
+  simulation as described in the paper.
+\end{itemize}
