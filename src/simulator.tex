@@ -1,8 +1,30 @@
-In the previous section we presented three WSN simulators commonly used and 
-found that neither NS-2 nor J-Sim were designed especially for wireless 
-sensor network simulators but that the basic applications needed to be extended
-in prder to offer support for WSN simulations, whereas TOSSIM is especially designed
-for the Berkeley Mica Mote platform.
+In the previous section we presented three WSN simulators commonly used.
+\\
+    Both NS-2 and J-Sim were not designed especially for wireless 
+sensor network simulators but the basic applications were extended
+in order to support WSN simulations; TOSSIM was especially designed
+for the Berkeley Mica Mote platform and aims to simulate rather TinyOS's behavior
+than general sensors. Even though they provide a good simulation environment,
+we believe a simulator targeted for wireless sensors will offer better results
+and take into consideration more of the particularities a WSN has.
+\\
+    Simulators are mainly used for research purposes, and if some tested solution
+offers good results it is very likely that it will be eventually ported on 
+read-world devices. The less effort needs to be invested in this porting, the
+better. Of the three simulators presented, nesC TOSSIM code is the easiest to port,
+but only on TinyOS motes, C/C++ NS-2 code can be ported as well but at a higher
+cost whereas Java J-Sim's code cannot be ported but the solution should be 
+reimplemented in a programming language that can be run on sensors.
+\codename will be written in C with a declared purpose of being very easy to port
+on real-world sensors.
+\\
+All three presented simulators lack detailed environment modeling: J-Sim has 
+antenna component to model signal transmissions and TOSSIM provides a configuration
+file to define the probability that a sent bit will be received corrupted. 
+ none of them
+being capable of 3D indoor simulation without modification. 
+\\
+
 \subsection{Architecture}
 \begin{center}
 	\includegraphics[scale=0.6]{img/board.pdf}
