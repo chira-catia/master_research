@@ -3,16 +3,16 @@ Following is a short analysis of their key features and some of their
 weak points as well and what we believe could be improved by implementing a
 new WSN simulator. First we list the improvements needed and then the 
 design features that we will use as well in \codename. 
-\\
-    Both NS-2 and J-Sim were not designed especially for wireless 
+
+Both NS-2 and J-Sim were not designed especially for wireless 
 sensor network simulators but the basic applications were extended
 in order to support WSN simulations; TOSSIM was especially designed
 for the Berkeley Mica Mote platform and aims to simulate rather TinyOS's behavior
 than general sensors. Even though they provide a good simulation environment,
 we believe a simulator targeted for wireless sensors will offer better results
 and take into consideration more of the particularities a WSN has.
-\\
-    Simulators are mainly used for research purposes, and if some tested solution
+
+Simulators are mainly used for research purposes, and if some tested solution
 offers good results it is very likely that it will be eventually ported on 
 read-world devices. The less effort needs to be invested in this porting, the
 better. Of the three simulators presented, nesC TOSSIM code is the easiest to port,
@@ -21,19 +21,45 @@ cost whereas Java J-Sim's code cannot be ported but the solution should be
 reimplemented in a programming language that can be run on sensors.
 \codename will be written in C with a declared purpose of being very easy to port
 on real-world sensors.
-\\
+
 All three presented simulators lack detailed environment modeling: J-Sim has 
 antenna component to model signal transmissions and TOSSIM provides a configuration
 file to define the probability that a sent bit will be received corrupted but 
 none of them is capable of 3D indoor simulation without modification. 
 This is another aspect on which we expect \codename to do better. 
-\\
+
 Useful data transmission is a feature which has not been given too much 
 attention on either of these simulators, the consumption of resources due to
 receiving or transmitting data being calculated with a mathematical formula.
  \codename will have a more realistic simulation of data transmission by effectively
 transmitting data in the simulated wireless network.
-  
+
+The component-oriented architecture of J-Sim simulator offers many advantages
+such as modularity and being able to connect different components and thus not being limited
+to a set of predefined combinations. \codename will have as well a component-based
+architecture.
+
+TOSSIM comes with a great advantage from that the code can be reused on motes,
+as stated above as well, \codename will be written in C so that the code can be
+used on real sensors with little effort.   
+
+These simulators offer a graphical user interface which makes them more intuitive
+and easier to use. TinyViz is the GUI for TOSSIM whereas nam\footnote{http:
+//www.isi.edu/nsnam/nam/} is a Tcl/TK based
+animation tool for NS-2 for viewing real world packet traces and network simulation
+traces. \codename will have a GUI as well.
+
+To sum up all the above these are the main features of \codename:
+\begin{itemize}
+\item designed for WSN simulations
+\item programming language: C
+\item comonent-like architecture
+\item more realistic environment simulations
+\item statistics module
+\item GUI
+\end{itemize} 
+Each of them is described in more detail in the following subsections.
+
 \subsection{Architecture}
 \begin{center}
 	\includegraphics[scale=0.6]{img/board.pdf}
