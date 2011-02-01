@@ -20,3 +20,13 @@ breakpoints at every point in the program and the parent process(the node) will 
 its speed based on a configured value. We don't see any reasons to have more than one
 type of CPU so only one will be available but have it performance and available memory
 configurable.
+
+Data through the network will not come only from the routing protocol but sensors on the 
+node will be able to generate realistical data that will accurately model the normal load
+on such a network. This is important in order to see how protocols behave under load and
+because some of them work by aggregating data.
+
+It is important to be able to gather information from the network(number of packets sent
+or received, battery life, power consumption per device) so there will be a central agent
+responsible for gathering this information. Each component will send the statistics gathered
+by them to the agent who will be able to present them in a more usefull form(bars and pies).
