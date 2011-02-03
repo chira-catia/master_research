@@ -8,14 +8,24 @@ sensors will increase its usability and make it possible that it will be
 useful in more circumstances.
 
 We propose this general plan for building this simulator:
-\begin{itemize}
-  \item Component architecture and basic node structure. We will build
-  template components and create the necessary framework to integrate them
-  into a sensor node.
-  \item Comunication between nodes. Create the neccessary framework to make
-  two nodes communicate.
-  \item Implement some routing procols. To evaluate our simulator we will
-  implement some routing procols(LEACH, TEEN) in it and see it's performance
-  \item Environment simulation. Will augment the simulator with environment
-  simulation as described in the paper.
-\end{itemize}
+The general plan for building this simulator is composed from more phases. We
+will begin by fully designing the component architecture and basic node
+structure.We will build template components and create the necessary framework to integrate them 
+into a sensor node. Next we will create the necessary framework for the nnodes
+to communicate. 
+After being able to simulate a wireless sensor network we will implement some
+routing protocols, such as LEACH and TEEN and based on the results of the
+simulation of these protocols we will determine \codename's performance.
+The final step is integrating into the simulator the feature of environment
+simulation.Will augment the simulator with environment simulation as described in the paper.
+%\begin{itemize}
+%  \item Component architecture and basic node structure. We will build
+%  template components and create the necessary framework to integrate them
+%  into a sensor node.
+%  \item Comunication between nodes. Create the neccessary framework to make
+%  two nodes communicate.
+%  \item Implement some routing procols. To evaluate our simulator we will
+%  implement some routing procols(LEACH, TEEN) in it and see it's performance
+%  \item Environment simulation. Will augment the simulator with environment
+%  simulation as described in the paper.
+%\end{itemize}

@@ -20,8 +20,33 @@
 % Support for including graphics
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\newcommand{\fig}[4][]{
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[#1]{#2}
+		\caption{#4 \label{#3}}
+    \end{center}
+\end{figure}
+}
+
+\usepackage{hyperref}
+\hypersetup{%
+	colorlinks=true,
+	linkcolor=black,
+	anchorcolor=black,
+	citecolor=black,
+	filecolor=black,
+	menucolor=black,
+	urlcolor=black,
+	bookmarks=true,
+	bookmarksnumbered=true
+}
+
+
 
 \newcommand{\codename}{WSNsim }
+
+\newcommand{\figref}[1]{\hyperref[#1]{Figure~\ref{#1}}}
 
 \linespread{1.3}
 \title{Implementing a new wireless sensor network simulator}
@@ -43,13 +68,7 @@ Splaiul Independenței nr. 313, Bucharest, Romania \\
 \input{src/abstract}
 \end{abstract}
 
-Keywords:
-\begin{itemize}
-  \item WSN
-  \item Routing protocols
-  \item NS-2/J-Sim/TOSSIM
-  \item \codename
-\end{itemize}
+\textit{\textbf{Keywords}}: wireless sensor networks, simulator, NS-2, J-Sim, TOSSIM.
 
 \section{Introduction}
 \label{sec:introduction}

@@ -49,21 +49,28 @@ and easier to use. TinyViz is the GUI for TOSSIM whereas nam\footnote{http:
 animation tool for NS-2 for viewing real world packet traces and network simulation
 traces. \codename will have a GUI as well.
 
-To sum up all the above these are the main features of \codename:
-\begin{itemize}
-\item designed for WSN simulations
-\item programming language: C
-\item comonent-like architecture
-\item more realistic environment simulations
-\item statistics module
-\item GUI
-\end{itemize} 
-Each of them is described in more detail in the following subsections.
+To sum up all the above, the main features of \codename are: it is designed for WSSN simulations, 
+its implementation will be in C, its architecture is component-like. It will be able to simulate
+environment is a more realistic way by allowing 3D environments. It will have a statistics module
+in order to keep track of resources consumption and relevant information about routing protocols
+and transmitted data. To be more usable, it will have a GUI. 
+%\begin{itemize}
+%\item designed for WSN simulations
+%\item programming language: C
+%\item comonent-like architecture
+%\item more realistic environment simulations
+%\item statistics module
+%\item GUI
+%\end{itemize} 
+
+Each of these features is described in more detail in the following subsections.
 
 \subsection{Architecture}
-\begin{center}
-	\includegraphics[scale=0.6]{img/board.pdf}
-\end{center}
+\codename architecture is shown in \figref{img:arch}
+\fig[scale=0.7]{img/board.pdf}{img:arch}{\codename architecture}
+%\begin{center}
+%	\includegraphics[scale=0.6]{img/board.pdf}
+%\end{center}
 \input{src/architecture}
 \subsection{Environment}
 \input{src/environment}
