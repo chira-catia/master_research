@@ -1,6 +1,6 @@
 \label{subsec:tossim}
 TOSSIM\cite{tossim} is a simulator for TinyOS sensor networks.
-All the protocol and systems simulated using TOSSIM are written in nesC \cite{nesC},
+All the protocols and systems simulated using TOSSIM are written in nesC \cite{nesC},
 an extension to C programming language designed to meet the specification and 
 restrictions of TinyOS. At a first glance this might seem a disadvantage, but 
 the code can then be reused on real-world motes running TinyOS
@@ -15,8 +15,8 @@ through SerialForwarder\footnote{\url{http://docs.tinyos.net/index.php/Mote-PC_
 serial_communication_and_SerialForwarder}}, the TinyOS interface tool.
 
 For radio communication, TOSSIM provides two modes: the simple mode when bits
-are transmitted without errors regardless of the distance between of the transmitting
-motes, and the lossy mode, when for every pair of motes a number between 0 and 1 
+are transmitted without errors regardless of the distance between the transmitting
+motes, and the lossy mode, when for every pair of communicating motes a number between 0 and 1 
 denotes the probability with which every received bit will be corrupted. These 
 mapping are defined in a configuration file which is given as an argument at boot
 time. The values specified in this configuration file can be changed at runtime
@@ -26,7 +26,7 @@ LossyBuilder which limits the transmitting area of every mote to a radius of 50
  feet and, at the same time, takes into consideration the rates defined as 
 described above.
 The values read from ADC are 10 bit values generated either random or generic, set
-by default to random as well but which can be controlled through control messages.
+by default to random, but which can be controlled through control messages.
 
 TOSSIM models the EEPROM memory with a memory-mapped file which, by default, is
 unmapped at the end of simulation but it can be configured to be persisten if a
@@ -37,6 +37,7 @@ WSN, offers support for debugging and interaction with TOSSIM. Also, traffic can
 be seen using TinyViz and extra functionality added through plugins
 \footnote{\url{http://www.tinyos.net/tinyos-1.x/doc/tutorial/lesson5.html}}.
 A model of a TOSSIM network is defined by the following structure:
+\lstset{numbers=none,captionpos=b,frame=single,language=C,caption=Structure for defining a network in TOSSIM,label=lst:tossimnet}
 \begin{lstlisting}
 typedef struct {
     void(*init)();

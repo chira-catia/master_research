@@ -2,31 +2,31 @@
 
 The simulator we will be building will have a modular design. Each type
 of component, a battery or a sensor, will a have a template containing a
-very basic implementation of it. For example a tranceiver template will
+very basic implementation of it. For example a transceiver template will
 have a template consisting of the send() and recv() methods, but more
-usefull implementations will build on this to take into account the
+usefull implementations will be built on this to take into account the
 environment and power consumption. On top of this template many different
 implementations may be derived; for example a lithium-ion battery or a solar
 powered one. Each component will provide an access interface for other components
-(an sensor might have a read_data() interface) and they will not depend on other 
+(a sensor might have a read_data() interface) and they will not depend on other 
 components. This way we will be able to simulate a wide range of platforms by
 combining different components in different slots.
 
 All the activity on one node will be coordinated by a CPU component. This will provide
-a API to routing protocol running on the node for activities such as allocating memory 
+an API to the routing protocol running on the node for activities such as allocating memory 
 and sending and receiving packets. To simulate a slower node, the code running on the 
-node will be ran using the ptrace system call. The protocol will set in the begining
+node will be ran using the \textit{ptrace} system call. The protocol will set in the beginning
 breakpoints at every point in the program and the parent process(the node) will limit
-its speed based on a configured value. We don't see any reasons to have more than one
-type of CPU so only one will be available but have it performance and available memory
-configurable.
+its speed based on a configured value. We do not see any reasons to have more than one
+type of CPU so only one will be available but its performance and available memory
+will be configurable.
 
 Data through the network will not come only from the routing protocol but sensors on the 
-node will be able to generate realistical data that will accurately model the normal load
-on such a network. This is important in order to see how protocols behave under load and
+node will be able to generate realistic data that will accurately model the normal load
+on such a network. This is important in order to see how protocols behave under load 
 because some of them work by aggregating data.
 
 It is important to be able to gather information from the network(number of packets sent
 or received, battery life, power consumption per device) so there will be a central agent
 responsible for gathering this information. Each component will send the statistics gathered
-by them to the agent who will be able to present them in a more usefull form(bars and pies).
+by them to the agent who will be able to present them in a more usefull form (bars and pies).

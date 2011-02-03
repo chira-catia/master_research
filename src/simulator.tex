@@ -14,7 +14,7 @@ and take into consideration more of the particularities a WSN has.
 
 Simulators are mainly used for research purposes, and if some tested solution
 offers good results it is very likely that it will be eventually ported on 
-read-world devices. The less effort needs to be invested in this porting, the
+read-world devices. The less effort is needed to be invested in this porting, the
 better. Of the three simulators presented, nesC TOSSIM code is the easiest to port,
 but only on TinyOS motes, C/C++ NS-2 code can be ported as well but at a higher
 cost whereas Java J-Sim's code cannot be ported but the solution should be 
@@ -24,7 +24,7 @@ on real-world sensors.
 
 All three presented simulators lack detailed environment modeling: J-Sim has 
 antenna component to model signal transmissions and TOSSIM provides a configuration
-file to define the probability that a sent bit will be received corrupted but 
+file to define the probability with which a sent bit will be received corrupted but 
 none of them is capable of 3D indoor simulation without modification. 
 This is another aspect on which we expect \codename to do better. 
 
@@ -49,10 +49,10 @@ and easier to use. TinyViz is the GUI for TOSSIM whereas nam\footnote{http:
 animation tool for NS-2 for viewing real world packet traces and network simulation
 traces. \codename will have a GUI as well.
 
-To sum up all the above, the main features of \codename are: it is designed for WSSN simulations, 
+To sum up all the above, the main features of \codename are: it is designed for WSN simulations, 
 its implementation will be in C, its architecture is component-like. It will be able to simulate
-environment is a more realistic way by allowing 3D environments. It will have a statistics module
-in order to keep track of resources consumption and relevant information about routing protocols
+environment in a more realistic way by allowing 3D environments. It will have a statistics module
+in order to keep track of resource consumption and relevant information about routing protocols
 and transmitted data. To be more usable, it will have a GUI. 
 %\begin{itemize}
 %\item designed for WSN simulations

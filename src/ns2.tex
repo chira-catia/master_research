@@ -1,8 +1,8 @@
 \label{subsec:ns2}
 
 NS-2 was started as a version of the REAL network simulator. It is currently at its 
-second iteration while its third(NS-3) is in active development and in a usable state.
-Work on it started working in 1989 and it was quicly adopted by the research community.
+second iteration while its third (NS-3) is in active development and in a usable state.
+Work on it started in 1989 and it was quickly adopted by the research community.
 Among the contributors to NS-2 have been Sun Microsystems, Xerox and Carnegie Mellon 
 university. 
 
@@ -11,10 +11,10 @@ used for definig protocols and libraries while OTCL is used to define and contro
 the simulation.
 
 Basic support for mobile nodes in NS-2 is added through the MobileNode class. This extends
-the generic Node class and adds support for mobilty of the node and the capability to
+the generic Node class and adds support for mobilty to the node and the capability to
 send and receive messages on a wireless medium. 
-Example commands to set the position and the movement of a node:
-\lstset{numbers=none,language=C,caption=Commands to set the position and movement of a node,label=lst:saddrule}
+Following are listed some example commands to set the position and the movement of a node:
+\lstset{numbers=none,captionpos=b,frame=single,language=C,caption=Commands to set the position and movement of a node,label=lst:saddrule}
 \begin{lstlisting}
 	$node set X_ <x>
 	$node set Y_ <y>
@@ -26,18 +26,28 @@ only two are used for the mobilty of nodes.
 
 Support for simulating wireless sensor networks in NS-2 has been added by the 
 MANNASIM project\footnote{\url{http://www.mannasim.dcc.ufmg.br/}}. It comes as
-a patch for NS-2 which add support for wireless sensors. It includes a number of
-new classes:
-\begin{itemize}
-	\item SensorNode class which is built on top of NS-2's MobileNode 
+a patch for NS-2 which adds support for wireless sensors. It includes a number of
+new classes such as: \textit{SensorNode class} which is built on top of NS-2's MobileNode 
 to include characteristics specific to wireless sensors such as power 
-consumption, memory and cpu.
-	\item BatteryClass, extenden from EnergyModel, which is used to simulate
-the battery of a node
-	\item DataGenerator, used for simulating the data with which the sensor is
-working. Can be used to simulate programmed, continuous, on demant and event driven
+consumption, memory and cpu, \textit{BatteryClass} extended from EnergyModel, 
+which is used to simulate
+the battery of a node and \textit{DataGenerator} used for simulating the data 
+with which the sensor is
+working; it can be used to simulate programmed, continous, on demant and event 
+driven
 data sources.
-\end{itemize}
+
+
+%\begin{itemize}
+%	\item SensorNode class which is built on top of NS-2's MobileNode 
+%to include characteristics specific to wireless sensors such as power 
+%consumption, memory and cpu.
+%	\item BatteryClass, extenden from EnergyModel, which is used to simulate
+%the battery of a node
+%	\item DataGenerator, used for simulating the data with which the sensor is
+%working. Can be used to simulate programmed, continuous, on demant and event driven
+%data sources.
+%\end{itemize}
 
 An important part of wireless sensor simulators is the environment in which the sensors
 are placed. It can affect the power needed to transmit a packet, the placement of nodes
