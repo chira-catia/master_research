@@ -29,6 +29,15 @@
     \end{center}
 \end{figure}
 }
+% command for specifying TODOs
+\newcommand{\todo}[1]{
+	\colorbox{yellow}{
+		\begin{minipage}{15cm}
+			\textbf{TODO:}\\
+			#1
+		\end{minipage}
+	}
+}
 
 \usepackage{hyperref}
 \hypersetup{%
@@ -78,6 +87,10 @@ Splaiul Independenței nr. 313, Bucharest, Romania \\
 \section{Related Work}
 \label{sec:relatedwork}
 \input{src/relatedwork}
+
+\section{Implementing LEACH in TOSSIM and ns-2}
+\label{sec:tests}
+\input{src/tests}
 
 \section{\codename}
 \label{sec:simulator}
