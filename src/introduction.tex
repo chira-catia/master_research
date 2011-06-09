@@ -1,22 +1,22 @@
 % vim: set tw=78 sts=2 sw=2 ts=8 aw et ai:
 
-Wireless sensor networks consist of numerous autonomous sensors that are
-capable of monitoring the environment in which they are placed with various
+Wireless Sensor Networks(WSNs) consist of numerous autonomous sensors that are
+capable of monitoring the environment in which they are placed using various
 sensors. Such a network would be usefull for monitoring different things such
-asas polution levels
-in a city or poisonous gases or might be able to sense vibrations in order 
+as polution levels
+in a city or assess poisonous gases, or might be able to sense vibrations in order 
 to predict an earthquake. 
 
 A wireless sensor network will contain many nodes, anywhere from a couple of
-hundred sensors to several thounds of nodes. Each of these nodes has one or
-more sensors incorporated for getting data from the environment, the number of
+hundred sensors to several thousands of nodes. Each of these nodes has one or
+more sensors incorporated for collecting information about the environment, the number of
 sensors is limited
 by the size and power consumption. Sensors also have a microcontroller 
 to process the data from the sensor and a transceiver to be able send to some 
 sink-node the data it collected. They are usually powered by some sort of battery 
 although solar cells and capacitors have also been used.
 
-Each sensor collects data from its location and sends it to the base station,
+Each sensor device collects data from its location and sends it to the base station,
 from where data from the whole network can be collected. A usual WSN is
 presented in \figref{img:wsn}. It is very power
 consuming to send data over long distances as the transceiver will need to
@@ -33,8 +33,8 @@ order cluster head.
 
 In this paper we will present some of the existing wireless network
 simulators emphasizing what we believe to be their strenghts and weaknesses. 
-In section NS-2 we discuss about NS-2 simulator, in section J-sim we present
+In section 2.1 we discuss about NS-2 simulator, in section J-sim we present
 J-sim and then we take a look at TOSSIM simulator. Based on these observations
-we introduce in section \codename, the WSN simulator we will implement which
+we introduce in section 4, the WSN simulator we will implement which
 encompasses most of these simulators' strenghts and adds some new features
 for wireless network simulators.
