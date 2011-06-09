@@ -44,17 +44,34 @@ round begins having the same phases.
 %%say about the article and energy measurements
 
 \subsection{Simplifications and assumptions used in our implementation}
-\todo{Sa zici aici de o singura runda si ce alte presupuneri ai mai facut}
+A full LEACH implementation was not neccessary because only some caracteristics of
+the simulators where observed. Instead of having more rounds and changing the topology
+so that the nodes don't run out of energy, the topology is only calculated once, after
+which only data traffic is present.
 \subsection{TOSSIM implementation}
-\todo{Probleme intalnite, chestii neobisnuite}
+TOSSIM is really easy to get used to when first working with it. There are many examples
+available, from simple ones to more complex. The user is in control of everything that is
+run on the node and not much is hidden from him.
 
 \subsection{ns-2 implementation}
-\todo{Probleme intalnite, chestii neobisnuite}
+NS2 has abstractions for every possible layer. Even though a user would normally not need to use
+all of these abstractions, they would have a hard time finding what they need to use through all 
+the classes.
 
 \subsection{Tests}
-For each testcase(cpu, memory,...)
+Below are two test done with varying number of simulated nodes to show the scalability of each simulator.
+On the horizontal axis we have the number of nodes and on the vertical we have the cpu or memory consumption.
 \begin{itemize}
-    \item{test description}
-    \item{results for each implementation}
-    \item{some conclusions}
+    \item{CPU utilization} 
+	\includegraphics[scale=0.35]{img/cpu.png}
+	On ns2 the cpu utilization increasesc quickly when adding more nodes, indicating that
+	more processing is needed for each new node. In tossim the cpu utilization does not vary
+	but the it has been observed that the simulation is slower when more nodes are added.
+    \item{Memory}
+	\includegraphics[scale=0.35]{img/mem.png}
+	Again, ns2 shows an increase in memory with each new node, while tossim show only a small
+	increase with each node added.
 \end{itemize}
+
+Although the tests show that tossim is doing better than ns2, at large numbers of nodes is more viable
+to use ns2 because, although consuming more resources, it maintains a realistic simulation.
