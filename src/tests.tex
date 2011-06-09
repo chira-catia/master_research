@@ -59,9 +59,19 @@ all of these abstractions, they would have a hard time finding what they need to
 the classes.
 
 \subsection{Tests}
+Below are two test done with varying number of simulated nodes to show the scalability of each simulator.
+On the horizontal axis we have the number of nodes and on the vertical we have the cpu or memory consumption.
 \begin{itemize}
-    \item{CPU utilization}
+    \item{CPU utilization} 
 	\includegraphics[scale=0.35]{img/cpu.png}
+	On ns2 the cpu utilization increasesc quickly when adding more nodes, indicating that
+	more processing is needed for each new node. In tossim the cpu utilization does not vary
+	but the it has been observed that the simulation is slower when more nodes are added.
     \item{Memory}
 	\includegraphics[scale=0.35]{img/mem.png}
+	Again, ns2 shows an increase in memory with each new node, while tossim show only a small
+	increase with each node added.
 \end{itemize}
+
+Although the tests show that tossim is doing better than ns2, at large numbers of nodes is more viable
+to use ns2 because, although consuming more resources, it maintains a realistic simulation.
