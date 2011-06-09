@@ -11,7 +11,7 @@ these two simulators based on the compararison of the behaviour and results of t
 
 
 \subsection{ Short routing protocol description}
-LEACH\cite{leach-desc}(Low-Energy Adaptive Clustering Hierarchy) is a clustering-based protocol
+Low-Energy Adaptive Clustering Hierarchy\cite{leach-desc}(LEACH) is a clustering-based protocol
 that minimizes energy disipation in sensor networks. Its main characteristics are that
 it uses localized coordination and control for cluster set-up and operation, it
 rotates the "cluster-head" nodes in order to evenly distribute energy consumption and
@@ -28,7 +28,7 @@ In the advertisment phase, a node decides whether to become a cluster-head or no
 on the suggested percentage of cluster heads for the network which is chosen a priori (based
 on the network size and other factors) and on the number of times it has already been a cluster-head. 
 Each node generates a random number between 0 and 1. If this number is less than a threshold value the node becomes cluster
-head for the curremt round. After electing itself a cluster-heads  a node broadcasts a 
+head for the current round. After electing itself a cluster-heads  a node broadcasts a 
 message to the rest of the nodes. During the first phase each non-cluster-head node keeps its receivers on.
 When the advertisment phase it is over, each non-cluster-head node decides in which
 cluster to be in this round. This decision is based on the signal strenght of the received advertising

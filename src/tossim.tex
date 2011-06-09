@@ -2,9 +2,7 @@
 TOSSIM\cite{tossim} is a simulator for TinyOS sensor networks.
 All the protocols and systems simulated using TOSSIM are written in nesC \cite{nesC},
 an extension to C programming language designed to meet the specification and 
-restrictions of TinyOS. At a first glance this might seem a disadvantage, but 
-the code can then be reused on real-world motes running TinyOS
-without further changes.
+restrictions of TinyOS. 
 
 TOSSIM provides debugging facilities having several debugging modes 
 (such as boot, clock,task,led,...) some of which are being used in TinyOS code, 
@@ -29,7 +27,7 @@ The values read from ADC are 10 bit values generated either random or generic, s
 by default to random, but which can be controlled through control messages.
 
 TOSSIM models the EEPROM memory with a memory-mapped file which, by default, is
-unmapped at the end of simulation but it can be configured to be persisten if a
+unmapped at the end of simulation but it can be configured to be persistent if a
 named file is specified at run-time.
 
 TinyViz is an extensible GUI which, besides offering a visual layout of the 

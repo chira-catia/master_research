@@ -1,18 +1,18 @@
 \label{subsec:jsim}
 J-sim\footnote {original web site \url{http://j-sim.cs.uiuc.edu/}, moving to 
-\url{http://sites.google.com/site/jsimofficial/}} is not a network simulator
+\url{http://sites.google.com/site/jsimofficial/}}\cite{jsim-new} is not a network simulator
 by itself, but a component based development environment. Component based
 development focuses on separation of concerns between the different subsystems
 of a software system. In terms of a wireless sensor node, it means that only 
-the battery will be in charge of the flow of electrecity through the system.
+the battery will be in charge of the flow of electricity through the system.
 This approach tries to mimic an integrated circuit. On top of the framework 
 provided by J-Sim, a wireless network simulator has been built.
 
 Following the component model, every object from a network is represented
 by a component. For example a node is a component, also a routing protocol
 is a component. The behaviour of such a component is specified by a contract,
-somewhat similar to a IC specification. Bindind between components and contracts
-is done in two phases. Contract bindind is done at design time while component
+somewhat similar to a integrated circuit specification. Binding between components and contracts
+is done in two phases. Contract binding is done at design time while component
 binding is done at system integration time. This means that a component can be
 designed without interference from other components and that we can use any type
 of component that fulfills a contract. For example we are not limited to a nickel
