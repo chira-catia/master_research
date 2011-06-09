@@ -49,18 +49,18 @@ the simulators where observed. Instead of having more rounds and changing the to
 so that the nodes don't run out of energy, the topology is only calculated once, after
 which only data traffic is present.
 \subsection{TOSSIM implementation}
-TOSSIM is really easy to get used to when first working with it. There are many examples
-available, from simple ones to more complex. The user is in control of everything that is
-run on the node and not much is hidden from him.
+The learning curve for TOSSIM is not a hard one as there are many examples
+available online, from simple ones to more complex ones, and the user is in control of 
+everything that is run on the node as not much is hidden from him.
 
 \subsection{ns-2 implementation}
-NS2 has abstractions for every possible layer. Even though a user would normally not need to use
-all of these abstractions, they would have a hard time finding what they need to use through all 
-the classes.
+Unlike TOSSIM, ns2 has abstractions for every possible layer. Even though user would normally not
+need to use all of these abstractions, they would have a hard time finding what they need
+to use through all the classes.
 
 \subsection{Tests}
-Below are two test done with varying number of simulated nodes to show the scalability of each simulator.
-On the horizontal axis we have the number of nodes and on the vertical we have the cpu or memory consumption.
+Below there are two tests done with a varying number of simulated nodes to show the scalability of each simulator.
+On the horizontal axis we have the number of nodes and on the vertical one we have the CPU or memory consumption.
 \begin{itemize}
     \item{CPU utilization} 
     \fig[scale=0.30]{img/cpu.png}{img:cpu}{CPU utilization}
