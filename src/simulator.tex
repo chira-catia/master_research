@@ -1,13 +1,14 @@
 In the previous section we presented three WSN simulators commonly used.
-Following is a short analysis of their key features and some of their
-weak points as well and what we believe could be improved by implementing a
-new WSN simulator. First we list the improvements needed and then the 
+The report presents a short analysis of their key features and some of their 
+weak points, as well as what we believe could be improved by implementing a 
+new WSN simulator.
+First we list the improvements needed and then the 
 design features that we will use as well in \codename. 
 
 Both NS-2 and J-Sim were not designed especially for wireless 
-sensor network simulators but the basic applications were extended
+sensor network simulators, but the basic applications were extended
 in order to support WSN simulations; TOSSIM was especially designed
-for the Berkeley Mica Mote platform and aims to simulate rather TinyOS's behavior
+for the Berkeley Mica Mote platform and aims to simulate TinyOS's behavior rather
 than general sensors. Even though they provide a good simulation environment,
 we believe a simulator targeted for wireless sensors will offer better results
 and take into consideration more of the particularities a WSN has.
@@ -24,7 +25,7 @@ on real-world sensors.
 
 All three presented simulators lack detailed environment modeling: J-Sim has 
 antenna component to model signal transmissions and TOSSIM provides a configuration
-file to define the probability with which a sent bit will be received corrupted but 
+file to define the probability with which a sent bit will be received corrupted, but 
 none of them is capable of 3D indoor simulation without modification. 
 This is another aspect on which we expect \codename to do better. 
 
@@ -35,11 +36,11 @@ receiving or transmitting data being calculated with a mathematical formula.
 transmitting data in the simulated wireless network.
 
 The component-oriented architecture of J-Sim simulator offers many advantages
-such as modularity and being able to connect different components and thus not being limited
+such as modularity and being able to connect different components, and thus it is not limited
 to a set of predefined combinations. \codename will have as well a component-based
 architecture.
 
-TOSSIM comes with a great advantage from that the code can be reused on motes,
+TOSSIM comes with a great advantage given by the code, because it can be reused on motes,
 as stated above as well, \codename will be written in C so that the code can be
 used on real sensors with little effort.   
 

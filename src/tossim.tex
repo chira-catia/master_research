@@ -7,8 +7,8 @@ the code can then be reused on real-world motes running TinyOS
 without further changes.
 
 TOSSIM provides debugging facilities having several debugging modes 
-(such as boot, clock,task,led,...) some of which are being used in TinyOS code
-and others are reserved for applications components. Compiling TinyOS for mote
+(such as boot, clock,task,led,...) some of which are being used in TinyOS code, 
+while others are reserved for applications components. Compiling TinyOS for mote
 hardware removes the debug statements.
 It also provides support for network monitoring and packet injection
 through SerialForwarder\footnote{\url{http://docs.tinyos.net/index.php/Mote-PC_
@@ -18,7 +18,7 @@ For radio communication, TOSSIM provides two modes: the simple mode when bits
 are transmitted without errors regardless of the distance between the transmitting
 motes, and the lossy mode, when for every pair of communicating motes a number between 0 and 1 
 denotes the probability with which every received bit will be corrupted. These 
-mapping are defined in a configuration file which is given as an argument at boot
+mappings are defined in a configuration file which is given as an argument at boot
 time. The values specified in this configuration file can be changed at runtime
 by sending control messages through a TCP socket to TOSSIM.
  Except for this lossy mode, the degradation of signal can be modeled using

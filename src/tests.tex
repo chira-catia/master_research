@@ -2,8 +2,8 @@ For a sensor network the routing protocol used for transmitting data from motes 
 the base station plays an important role because sensors' resources are limited and 
 and their lifetime could be drasticaly reduced if not using an appropriate protocol.
 A straight-forward solution could be to use a direct communication protocol where
-each sensor sends its data to the base station directly but sending data over a 
-long distance is a very energy consuming operation, much expensive than a series
+each sensor sends its data to the base station directly, but sending data over a 
+long distance is a very energy consuming operation, much more expensive than a series
 of local computations.
 In the following section we present a short description of LEACH, a routing protocol for sensor networks, and
 its implementation in TOSSIM and ns-2 simulators along with some conclusions regarding 
@@ -23,21 +23,21 @@ is based on a priority each of the motes has, which is computed based on the ene
 each mote has.
 
 The LEACH algorithm is broken up into rounds which begin with a set-up phase when organizing the 
-network and selecting the cluster head and a steady-state phase when data is being transmitted.
-In the advertisment phase a node decides whether to become a cluster-head or not based
-on the suggested percentage of cluster heads for the network which is chisen a priori (based
+network and selecting the cluster head, and a steady-state phase when data is being transmitted.
+In the advertisment phase, a node decides whether to become a cluster-head or not based
+on the suggested percentage of cluster heads for the network which is chosen a priori (based
 on the network size and other factors) and on the number of times it has already been a cluster-head. 
 Each node generates a random number between 0 and 1. If this number is less than a threshold value the node becomes cluster
 head for the curremt round. After electing itself a cluster-heads  a node broadcasts a 
 message to the rest of the nodes. During the first phase each non-cluster-head node keeps its receivers on.
-When the advertisment phase it is over each non-cluster-head node decides in which
+When the advertisment phase it is over, each non-cluster-head node decides in which
 cluster to be in this round. This decision is based on the signal strenght of the received advertising
 messages.
 After choosing a cluster, each non-cluster-head node sends a message
-to the cluster-head corresponding to that cluster which, after receiving these messages
-creates a TDMA\cite{tdma} schedule telling each node when it can transmit data and it broadcasts
+to the cluster-head corresponding to that cluster which, after receiving these messages,
+creates a TDMA\cite{tdma} schedule telling each node when it can transmit data, and it broadcasts
 this to the nodes in the cluster.
-After this, data transmition begins which lasts for a predefined amount of time and afterwards a next
+After this, data transmition begins which lasts for a predefined amount of time, and afterwards a next
 round begins having the same phases.
 
  
